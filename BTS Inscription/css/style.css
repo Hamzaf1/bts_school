@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+.azure-button{
+    padding: 1em 2em;
+    background-color:#79D2FB ;
+    border-radius: 50px;
+    box-shadow: 0px 4px 13px 2px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.azure-button:hover {
+    box-shadow: none;
+}
+/****************************
+    Layout
+****************************/
+.main-container {
+    padding :1em;
+    background-image: url("../images/Background-menu.jpg");
+}
+.main-content {
+    padding :2em 1em;
+    margin: 0em 0em 3em 0em;
+}
+.main-content-1{
+    background-image: url("../images/containtBg.png");
+    background-repeat: no-repeat;
+}
+.main-content-3{
+    margin: 0em;
+    display: grid;
+    justify-content: space-around;
+    flex-direction: column;
+    background-image: url("../images/Background-wide.png");
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:700px) {
+    .main-content-1 img {
+        display: none;
+    }
+}
+.credits{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+}
+@media screen and (max-width : 700px){
+    .credits{
+        margin-top: 8em;
+    } 
+}
+.row-1{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 3em;
+    max-width: 1200px;
+}
+.col-1, .col-2{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+@media screen and (max-width:850px){
+    .row-1{
+        flex-direction: column;
+        padding: 0 1em;
+        
+    }
+    .col-2{
+        display: none;
+    }
+    .col-1{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        
+    }
+}
+.grid-container{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3%;
+
+}
+@media screen and (max-width : 1100px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+.text-glider{
+    text-align: center;
+    font-style: italic;
+}
+.text-glider span {
+    color: #1E6C93;
+}
+p{
+    padding-bottom: 1em;
+}
+figure{
+    margin-bottom: 0em;
+}
+@media screen and (max-width : 700px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(4, 1fr); 
+        grid-gap: 1%;
+    }
+    .glider{
+        display: none;
+    }
+}
+
+/****************************
+    Typography
+****************************/
+body{
+    font-family: 'Raleway', sans-serif;
+}
+nav {
+    font-weight: 500;
+    color: white;
+}
+h1{
+    font-weight: 700;
+}
+.main-container, .subscribe-field{
+    color : white;
+}
+.main-content{
+    color: black;
+}
+.element{
+    text-align: center;
+    font-size: 0.8rem;
+}
+.element h2 {
+    font-weight: 900;
+}
+.credits{
+    color: rgba(0,0,0,0.2);
+    font-size: 0.7rem;
+}
+/****************************
+    Header
+****************************/
+
+.header{
+    margin-left: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width:800px) {
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    nav li {
+        margin: 0 1em;
+    }
+    
+}
+nav img{
+    height: 5em;
+}
+nav ul{ 
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: .25em 0;
+}
+nav li > a:hover{
+    transition: 200ms;
+    color: #79D2FB;
+}
+
+.active-page {
+    border-bottom: 1px solid white;
+}
+.active-page:hover, .azure-button:hover>a {
+    color : white;
+}
+
+/****************************
+    Main content
+****************************/
+
+.element{
+    margin: 0 auto;
+    width : 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.element img {
+    width : 50%;
+}
+@media screen and (max-width:850px) {
+    .main-content-2{
+        margin-top: 3em;
+    }
+    .element{
+        width :100%;
+        flex-direction: row;
+        text-align: start;
+    }
+    .element img {
+        width : 20%;
+        padding: 0em 1em;
+    }
+}
+
+/****************************
+    Mailing Input
+****************************/
+/* Stylish banner*/
+.stylish-banner{
+    padding: 0em;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* Email Field */
+.subscribe-field {
+    padding: 2em 0;
+    padding-bottom: 0px;
+    background-color: #0070BE ;
+    border-radius: 6.25em;
+    width : 70%;
+    align-items: center;
+    position:relative;
+    top : -5em;
+}
+.subscribe-field div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #79D2FB ;
+    padding: 3em;
+    margin: auto 0;
+    border-radius: 6.25em;
+    height: 100%;
+}
+.subscribe-field div h1 {
+    margin: 0em;
+}
+@media screen and (max-width:850px){
+    .subscribe-field {
+        background-color: #ffff;
+        position: none;
+        top : 0em;
+    }
+    .subscribe-field div {
+        padding: 0 em;
+        margin: 0 0 ;
+        border-radius: 6.25em;
+        height: 100%;
+    }
+}
+
+/* Email Input */
+.c-formContainer,
+.c-form {
+    width: 100%;
+    height: 3.25em;
+    font-size: 0.9rem;
+}
+.c-formContainer {
+    font-weight: 700;
+}
+.c-form{
+    border-radius: 6.25em;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 5em;
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.3125em rgba(0,0,0 , 0.3);
+    display: flex;
+    justify-content: center;  
+}
+.c-form__input,
+.c-form__button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+.c-form__input {
+    border-radius: 6.25em;
+    color: #0070BE;
+    height: 100%;
+    width: 100%;
+    padding: 0 2em;
+}
+::placeholder {
+    color: rgba(0,0,0 , 0.3);
+    font-style: italic;
+}
+.c-form__button {
+    height: 100%;
+    width: 5em;
+    border-top-right-radius: 6.25em;
+    border-bottom-right-radius: 6.25em;
+    background-color: #0070BE;
+}
+.c-form__button img{
+    width: 30%;
+}
+.glide-contain{
+    height: 50%;
+}
+.glider{
+    padding : 0;
+}
+/****************************
+   Page main title
+****************************/
+.page-title{
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bolder;
+    color: #1E6C93;
+    text-transform: uppercase;
+}
+/****************************
+    Flip card
+****************************/
+  /* The flip card container*/
+.flip-card{
+    background-color: transparent;
+    border-radius: 16px;
+    width: 20em;
+    height: 35em;
+    perspective: 1000px;
+}
+  
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border: 1px solid gray;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    border-radius: 16px;
+    background-color: #fff;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    border-radius: 16px;
+    background-color: #fff;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  .card-title{
+        border-top-left-radius: 16px;
+        border-top-right-radius : 16px;
+        background-color: #1E6C93;
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .flip-card-front > .card-title {
+        height: 50%;
+    }
+  .card-bg-title{
+    font-size: 4rem;
+    font-weight: 1000;
+    color: rgba(255,255,255 , 0.3);
+    text-align: end;
+  }
+  .card-main-title{
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 1.5em 1.7em;
+    text-align: start;
+  }
+  .card-front-text, .flip-card-back-text{
+    font-size: 0.9em;
+    padding: 1.5em 1.7em;
+    text-align: start;
+  }
+  .card-front-text-aside{
+    font-style: italic;
+    color: gray;
+    margin: 1em 0;
+  }
+  .flip-card-back-text ul{
+      padding-left: 1em;
+  }
+  .flip-card-back-text li{
+    list-style-type: "→ ";
+    list-style-position: outside;
+  }
+  .side-image{
+      grid-column: 2 / 4;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      
+  }
+  .side-image img{
+      width: 70%;
+      margin: 0 2em;
+      justify-self: end;
+  }
+  @media screen and (max-width : 1100px){
+    .side-image{
+        display: none;
+    }
+}
+@media screen and (max-width : 700px){
+    .side-image{
+        display: none;
+    }
+}
+
+/****************************
+    Log page
+****************************/
+.main-log-container{
+    height: 90vh;
+    padding: 3em 0;
+    background-image: url("../images/Background-log-wide.jpg");
+    background-size: cover;
+}
+.main-log-container p{
+    color: white;
+}
+.log-section{
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+}
+.log-box{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width:900px){
+    .main-log-container{
+        background: #1E6C93;
+        position: relative;
+        top: 0;
+        right: 0px;
+        bottom: auto;
+        left: 0px;
+        align-items: center;
+    }
+
+    .log-section{
+        justify-content: center;
+    }
+    .log-box{
+        width: 50%;
+    }
+}
+
+/****************************
+    Map box
+****************************/
+.coordinates-box{
+    height: 50vh;
+    max-width: 1200px;
+    display: grid;
+    padding: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    gap: 1%;
+    align-items: flex-end;
+    justify-items: center;
+}
+.map-box{
+    border: 2px solid #1E6C93;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+}
+.coordinates-box table{
+    margin: 0 0.5em;
+    text-align: left;
+}
+.coordinates-box table th, td{
+    padding:0.5em 0;
+}
+th{
+    width: 20%;
+    color: #1E6C93 ;
+    font-weight: bolder;
+}
+@media screen and (max-width:900px){
+    .coordinates-box{
+        height: 70vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .coordinates-box table th, td{
+        width: 100%;
+        display: block;
+    }
+    .map-box{
+        height: 20vh;
+    }
+}
+
+/****************************
+    Numered content
+****************************/
+.numered-content{
+    display: flex;
+    align-items: center;
+    margin: 2em 0em;
+    padding-right :2em;
+}
+.number {
+    display: flex;
+    justify-content: center;
+    width: 70vh;
+}
+.text{
+    width: 70%;
+}
+.higlighted-link{
+    text-decoration: none;
+    margin: 0.3em 0;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color :#1E6C93;
+    display: block;
+}
+.numered-content-2{
+    padding-left: 7em;
+    padding-right :0;
+}
+.warning-text{
+    color: red;
+    font-weight: 900;
+}
+.azure-button a {
+    text-decoration: none;
+    color: white;
+}
+.numered-content span {
+    font-weight: bold;
+    color: #1E6C93;
+}
+ol li{
+    margin-left: 3em;
+    list-style-type: decimal;
+}
+@media screen and (max-width:900px){
+    .numered-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .number img{
+        width: 30%;
+    }
+    #png-1{
+        width: 4em;
+    }
+    .numered-content-2 {
+        padding-left: 0em;
+        flex-direction: column-reverse;
+    }
+    ol li{
+        text-align: left;
+    }
+}
+button:hover{
+    cursor: pointer;
+}
+
+/**************Candidature Connexion**************/
+.info-card{
+    border: 2px solid #0070BE;
+    border-radius: 90px;
+    box-shadow: 0px 4px 13px 2px rgba(0,0,0,0.2);
+    max-width: 1100px;
+    padding-bottom: 0%;
+    background-color: white;
+}
+.info-card-side{
+    align-items: center;
+    padding: 3em;
+    width: 25em;
+}
+.info-card-side>a{
+    text-decoration: none;
+    margin-top: 2em;
+    width: 60%;
+}
+.connexionFormSubmit{
+    padding: 1em 2em;
+    border: none;
+    background-color:#79D2FB ;
+    border-radius: 50px;
+    box-shadow: 0px 4px 13px 2px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width : 100%;
+    margin-top: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+.connexionFormSubmit:hover{
+    box-shadow:none;
+}
+.connexionForm{
+    width: 100%;
+}
+.connexionFormInput,.connexionForm>label{
+    display: block;
+    width: 100%;
+    color: #1E6C93;
+}
+.connexionFormInput{
+    height: 2em;
+    border: none;
+    background: none;
+    border-bottom: solid 1px #1E6C93;
+}
+.connexionForm>label{
+    margin-top: 1em;
+}
+
+.info-card-description{
+    width: 90%;
+    font-size: small;
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
+.info-card-side>h1{
+    color:#1E6C93;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.info-card-right{
+    border-left: 2px solid #0070BE;
+}
+@media screen and (max-width:850px){
+    .info-card-right{
+        border: none;
+        border-top: 2px solid #0070BE;
+    }
+}
+
+/****************************
+    Choix bac
+****************************/
+.general-choix-card{
+    width: 90%;
+    padding: 3em;
+}
+.general-choix-card>h1{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.choix-img{
+    width : 100%;
+    display: flex;
+}
+.choix-img img{
+    margin : auto;
+    width: 80px;
+    height:170px;
+}
+.choix{
+    border: 2px solid #0070BE;
+    border-radius: 90px;
+    box-shadow: 0px 4px 13px 2px rgb(0 0 0 / 20%);
+    width: 200px;
+    height: 250px;
+    padding: 0.5em;
+}
+.choix-name{
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 1.5em;
+    
+}
+.choix-card{
+    display : flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
